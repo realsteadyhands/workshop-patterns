@@ -23,7 +23,31 @@ export function sumToN(n) {
  */
 export function factorial(n) {
   // TODO
+  
+  let product = 1
+
+  for (let i = 1; i <= n; i++ ) {
+    product *= i
+  }
+
+  if (typeof n !== 'number') {
+    product = `NaN`
+  }
+  if (n < 0) {
+    product = `undefined`
+  }
+  if (n === 0) {
+    product = `1`
+  }
+
+  return product
 }
+
+console.log(factorial(5))
+console.log(factorial("5"))
+console.log(factorial("a"))
+console.log(factorial(-5))
+console.log(factorial(0))
 
 /**
  * @param {number} n

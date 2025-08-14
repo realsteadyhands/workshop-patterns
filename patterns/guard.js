@@ -19,7 +19,27 @@ export function multiply(num1, num2) {
  */
 export function vote(age) {
   // TODO
+
+  let voteChecker = ""
+
+  if (age !== typeof 'number') {
+    voteChecker = "Age not valid."
+  }
+  if (age >= 18) {
+    voteChecker = "Who would you like to vote for?"
+  }
+  if (age < 18) {
+    voteChecker = "You must be 18 or older to vote."
+  }
+
+  return voteChecker
+
 }
+
+// console.log(vote(17))
+// console.log(vote(19))
+// console.log(vote("A"))
+// console.log(vote("1"))
 
 /**
  * @param {string} str1
@@ -29,4 +49,15 @@ export function vote(age) {
  */
 export function concatenateStrings(str1, str2) {
   // TODO
+  let merge = ""
+  if (str1) {
+    merge += str1
+  }
+  if (str2) {
+    merge += str2
+  }
+  return merge
 }
+
+// console.log(concatenateStrings("testing", " string"))
+// console.log(concatenateStrings("testing", " 001"))
